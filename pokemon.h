@@ -11,8 +11,6 @@ enum struct Element {FIRE, WATER, GRASS};
 // Pokemon class - Base class
 class Pokemon{
 
-private:
-
 protected:
 	string name;
 	int level;
@@ -36,23 +34,26 @@ public:
 // Fire Type class - Derived class of Pokemon
 class Fire: protected Pokemon{
 
+public:
 	// Constructor that performs stat changes for Fire
-	Fire(int,int,int,int,int,int);
+	Fire();
 
 };
 
 // Water Type class - Derived Class of Pokemon
 class Water: protected Pokemon{
 
+public:
 	// Constructor that performs stat changes for Water
-	Water(int,int,int,int,int,int);
+	Water();
 };
 
 // Grass Type class - Derived class of Pokemon
 class Grass: protected Pokemon{
 
+public:
 	// Constructor that performs stat changes for Grass
-	Grass(int,int,int,int,int,int);
+	Grass();
 };
 
 #endif /* POKEMON_H_ */

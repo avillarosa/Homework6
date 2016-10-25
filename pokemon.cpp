@@ -1,7 +1,7 @@
 #include "pokemon.h"
 
 // Base class Pokemon methods
-Pokemon::Pokemon(int i){}
+Pokemon::Pokemon(int index){}
 
 Pokemon::~Pokemon(){}
 
@@ -21,14 +21,7 @@ int Pokemon::get_hp(){
 	return hp;
 }
 
-Fire::Fire(int health , int atk, int def, int sAtk, int sDef, int spd){
-
-	hp = health;
-	attack = atk;
-	defense = def;
-	specialAttack = sAtk;
-	specialDefense = sDef;
-	speed = spd;
+Fire::Fire(){
 
 	hp += 1;
 	attack += 2;
@@ -39,14 +32,7 @@ Fire::Fire(int health , int atk, int def, int sAtk, int sDef, int spd){
 
 }
 
-Water::Water(int health , int atk, int def, int sAtk, int sDef, int spd){
-
-	hp = health;
-	attack = atk;
-	defense = def;
-	specialAttack = sAtk;
-	specialDefense = sDef;
-	speed = spd;
+Water::Water(){
 
 	hp += 2;
 	attack -= 2;
@@ -57,14 +43,7 @@ Water::Water(int health , int atk, int def, int sAtk, int sDef, int spd){
 
 }
 
-Grass::Grass(int health, int atk, int def, int sAtk, int sDef, int spd){
-
-	hp = health;
-	attack = atk;
-	defense = def;
-	specialAttack = sAtk;
-	specialDefense = sDef;
-	speed = spd;
+Grass::Grass(){
 
 	hp -= 3;
 	attack -= 2;
