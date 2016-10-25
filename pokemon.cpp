@@ -1,5 +1,6 @@
 #include "pokemon.h"
 
+// Base class Pokemon methods
 Pokemon::Pokemon(int i){}
 
 Pokemon::~Pokemon(){}
@@ -19,8 +20,3 @@ int Pokemon::get_hpMax(){
 int Pokemon::get_hp(){
 	return hp;
 }
-
-
-
-
-
