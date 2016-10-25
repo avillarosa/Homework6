@@ -13,9 +13,9 @@ class Pokemon{
 
 protected:
 	string name;
-	int level;
-	int hp, hpMax;
-	int attack, defense, specialAttack, specialDefense, speed;
+	int level = 1;
+	int hp = 20, hpMax;
+	int attack = 10, defense = 10, specialAttack = 10, specialDefense = 10, speed = 10;
 
 public:
 	// Constructor
@@ -28,6 +28,9 @@ public:
 	int get_level();
 	int get_hpMax();
 	int get_hp();
+
+	// Factory friend function
+	friend Pokemon *make_pokemon(Element, string);
 
 };
 

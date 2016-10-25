@@ -54,4 +54,13 @@ Grass::Grass(){
 
 }
 
+// factory function
+Pokemon *make_pokemon(Element ele, string na){
+
+	Pokemon *pokePtr = new Pokemon;
+	pokePtr->name[ele] = na;
+
+	return pokePtr;
+}
+
 
