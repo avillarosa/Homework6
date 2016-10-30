@@ -36,26 +36,23 @@ public:
 
 // Fire Type class - Derived class of Pokemon
 class Fire: protected Pokemon{
-
 public:
-	// Constructor that performs stat changes for Fire
+	// Performs stat changes for Fire
 	Fire();
 
 };
 
 // Water Type class - Derived Class of Pokemon
 class Water: protected Pokemon{
-
 public:
-	// Constructor that performs stat changes for Water
+	// Performs stat changes for Water
 	Water();
 };
 
 // Grass Type class - Derived class of Pokemon
 class Grass: protected Pokemon{
-
 public:
-	// Constructor that performs stat changes for Grass
+	// Performs stat changes for Grass
 	Grass();
 };
 
