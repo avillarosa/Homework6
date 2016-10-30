@@ -13,6 +13,7 @@ class Pokemon{
 
 protected:
 	string name;
+	int index;
 	int level = 1;
 	int hp = 20, hpMax;
 	int attack = 10, defense = 10, specialAttack = 10, specialDefense = 10, speed = 10;
@@ -38,7 +39,7 @@ public:
 class Fire: protected Pokemon{
 public:
 	// Performs stat changes for Fire
-	Fire();
+	Fire(int);
 
 };
 
@@ -46,14 +47,14 @@ public:
 class Water: protected Pokemon{
 public:
 	// Performs stat changes for Water
-	Water();
+	Water(int);
 };
 
 // Grass Type class - Derived class of Pokemon
 class Grass: protected Pokemon{
 public:
 	// Performs stat changes for Grass
-	Grass();
+	Grass(int);
 };
 
 #endif /* POKEMON_H_ */

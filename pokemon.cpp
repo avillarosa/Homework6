@@ -1,7 +1,7 @@
 #include "pokemon.h"
 
 // Base class Pokemon methods
-Pokemon::Pokemon(int index){}
+Pokemon::Pokemon(int i){ index = i; }
 
 Pokemon::~Pokemon(){}
 
@@ -21,7 +21,7 @@ int Pokemon::get_hp(){
 	return hp;
 }
 
-Fire::Fire(){
+Fire::Fire(int i): Pokemon(i){
 
 	hp += 1;
 	attack += 2;
@@ -32,7 +32,7 @@ Fire::Fire(){
 
 }
 
-Water::Water(){
+Water::Water(int i): Pokemon(i){
 
 	hp += 2;
 	attack -= 2;
@@ -43,7 +43,7 @@ Water::Water(){
 
 }
 
-Grass::Grass(){
+Grass::Grass(int i): Pokemon(i){
 
 	hp -= 3;
 	attack -= 2;
