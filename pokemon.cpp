@@ -58,7 +58,7 @@ Grass::Grass(int i): Pokemon(i){
 Pokemon *make_pokemon(Element ele, string na){
 
 	Pokemon *pokePtr = new Pokemon;
-	pokePtr->name[ele] = na;
+	pokePtr->get_name() = na;
 
 	return pokePtr;
 }
