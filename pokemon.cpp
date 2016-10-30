@@ -54,25 +54,6 @@ Grass::Grass(int i): Pokemon(i){
 
 }
 
-// factory function
-Pokemon *make_pokemon(Element ele, string na, int i){
 
-	if (ele == Element::FIRE){
-		Pokemon *pokePtr = new Fire(i);
-		pokePtr->get_name() = na;
-		return pokePtr;
-	}
-	else if (ele == Element::WATER){
-		Pokemon *pokePtr = new Water(i);
-		pokePtr->get_name() = na;
-		return pokePtr;
-	}
-	else{
-		Pokemon *pokePtr = new Grass(i);
-		pokePtr->get_name() = na;
-		return pokePtr;
-	}
-
-}
 
 

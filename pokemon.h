@@ -1,9 +1,9 @@
+#ifndef POKEMON_H_
+#define POKEMON_H_
+
 #include <iostream>
 #include <string>
 using namespace std;
-
-#ifndef POKEMON_H_
-#define POKEMON_H_
 
 // Scoped enumeration for the element type, FIRE, WATER, GRASS
 enum struct Element {FIRE, WATER, GRASS};
@@ -56,5 +56,26 @@ public:
 	// Performs stat changes for Grass
 	Grass(int);
 };
+
+// factory function
+Pokemon *make_pokemon(Element ele, string na, int i){
+
+	if (ele == Element::FIRE){
+		Pokemon *pokePtr = new Fire(i);
+		pokePtr->get_name() = na;
+		return pokePtr;
+	}
+	else if (ele == Element::WATER){
+		Pokemon *pokePtr = new Water(i);
+		pokePtr->get_name() = na;
+		return pokePtr;
+	}
+	else{
+		Pokemon *pokePtr = new Grass(i);
+		pokePtr->get_name() = na;
+		return pokePtr;
+	}
+
+}
 
 #endif /* POKEMON_H_ */
