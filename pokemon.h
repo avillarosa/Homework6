@@ -31,12 +31,12 @@ public:
 	int get_hp();
 
 	// Factory friend function
-	friend Pokemon *make_pokemon(Element, string);
+	friend Pokemon *make_pokemon(Element, string, int);
 
 };
 
 // Fire Type class - Derived class of Pokemon
-class Fire: protected Pokemon{
+class Fire: public Pokemon{
 public:
 	// Performs stat changes for Fire
 	Fire(int);
@@ -44,14 +44,14 @@ public:
 };
 
 // Water Type class - Derived Class of Pokemon
-class Water: protected Pokemon{
+class Water: public Pokemon{
 public:
 	// Performs stat changes for Water
 	Water(int);
 };
 
 // Grass Type class - Derived class of Pokemon
-class Grass: protected Pokemon{
+class Grass: public Pokemon{
 public:
 	// Performs stat changes for Grass
 	Grass(int);
