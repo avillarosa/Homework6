@@ -1,3 +1,9 @@
+/*************************
+Adam Villarosa           *
+Homework 6               *
+11-06-2016               *
+CPSC - 121               *
+**************************/
 #ifndef POKEMON_H_
 #define POKEMON_H_
 
@@ -31,7 +37,7 @@ public:
 	int get_hp();
 
 	// Factory friend function
-	friend Pokemon *make_pokemon(Element, string, int);
+	friend Pokemon *make_pokemon(Element, string);
 
 };
 
@@ -58,20 +64,20 @@ public:
 };
 
 // factory function
-Pokemon *make_pokemon(Element ele, string na, int i){
+Pokemon *make_pokemon(Element ele, string na){
 
 	if (ele == Element::FIRE){
-		Pokemon *pokePtr = new Fire(i);
+		Pokemon *pokePtr = new Fire(static_cast<int>(Element::FIRE));
 		pokePtr->get_name() = na;
 		return pokePtr;
 	}
 	else if (ele == Element::WATER){
-		Pokemon *pokePtr = new Water(i);
+		Pokemon *pokePtr = new Water(static_cast<int>(Element::WATER));
 		pokePtr->get_name() = na;
 		return pokePtr;
 	}
 	else{
-		Pokemon *pokePtr = new Grass(i);
+		Pokemon *pokePtr = new Grass(static_cast<int>(Element::GRASS));
 		pokePtr->get_name() = na;
 		return pokePtr;
 	}
