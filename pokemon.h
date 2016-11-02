@@ -66,20 +66,27 @@ public:
 // factory function
 Pokemon *make_pokemon(Element ele, string na){
 
+	Pokemon *pokePtr = new Pokemon(0);
+
 	if (ele == Element::FIRE){
-		Pokemon *pokePtr = new Fire(static_cast<int>(Element::FIRE));
-		pokePtr->get_name() = na;
-		return pokePtr;
+	
+		Fire *firePtr = static_cast<Fire *>(pokePtr);	
+		return firePtr;
+		
 	}
+	
 	else if (ele == Element::WATER){
-		Pokemon *pokePtr = new Water(static_cast<int>(Element::WATER));
-		pokePtr->get_name() = na;
-		return pokePtr;
+
+		Water *waterPtr = static_cast<Water *>(pokePtr);		
+		return waterPtr;
+
 	}
+
 	else{
-		Pokemon *pokePtr = new Grass(static_cast<int>(Element::GRASS));
-		pokePtr->get_name() = na;
-		return pokePtr;
+		
+		Grass *grassPtr = static_cast<Grass *>(pokePtr);
+		return grassPtr;
+
 	}
 
 }
