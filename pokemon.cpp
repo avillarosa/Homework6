@@ -1,7 +1,7 @@
 #include "pokemon.h"
 
 // Base class Pokemon methods
-Pokemon::Pokemon(int i){ index = i; }
+Pokemon::Pokemon(int index){ }
 
 Pokemon::~Pokemon(){}
 

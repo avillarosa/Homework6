@@ -19,7 +19,6 @@ class Pokemon{
 
 protected:
 	string name;
-	int index;
 	int level = 1;
 	int hp = 20, hpMax;
 	int attack = 10, defense = 10, specialAttack = 10, specialDefense = 10, speed = 10;
@@ -66,26 +65,27 @@ public:
 // factory function
 Pokemon *make_pokemon(Element ele, string na){
 
-	Pokemon *pokePtr = new Pokemon(0);
 
 	if (ele == Element::FIRE){
-	
-		Fire *firePtr = static_cast<Fire *>(pokePtr);	
-		return firePtr;
 		
+		Pokemon *pokePtr = new Fire(0);
+		pokePtr->get_name() = na;
+		return pokePtr;
+
 	}
 	
 	else if (ele == Element::WATER){
 
-		Water *waterPtr = static_cast<Water *>(pokePtr);		
-		return waterPtr;
-
+		Pokemon *pokePtr = new Water(0);
+		pokePtr->get_name() = na;
+		return pokePtr;
 	}
 
 	else{
 		
-		Grass *grassPtr = static_cast<Grass *>(pokePtr);
-		return grassPtr;
+		Pokemon *pokePtr = new Grass(0);
+		pokePtr->get_name() = na;
+		return pokePtr;
 
 	}
 
